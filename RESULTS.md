@@ -4,10 +4,10 @@ Tool parts that I chose: Robot and Cypress
 ## Part 0
 - Step 0.1, Chrome version: 157.0.8103.78 (Official Build) (arm64) 
 - Step 0.3, ChromeDriver version: ChromeDriver 157.0.8103.78 (4b3d0dabb8250b6f152d2d85d79e7706e309d087-refs/branch-heads/8103@{#1573})
-- Step 0.4, locator of Pizza, Please!:
-- Step 0.4, locator of Excluded tools:
-- Step 0.4, locator of Must be vegetarian:
-- Step 0.4, locator of Custom Pizza Name:
+- Step 0.4, locator of Pizza, Please!: $x("//button[normalize-space()='Pizza, Please!']")
+- Step 0.4, locator of Excluded tools: $x("//select[option[normalize-space()='Knife']]")
+- Step 0.4, locator of Must be vegetarian: $x("//label[normalize-space()='Must be vegetarian']/preceding-sibling::input")
+- Step 0.4, locator of Custom Pizza Name: $$("input#pizza-name")
 - Step 0.5, pizza name, tool and calories of the run by hand:
 | Step | Actual result | Pass or fail | |------|---------------|--------------| |1||| |2||| |3||| |4||| |5||| |6||| |7|||
 
