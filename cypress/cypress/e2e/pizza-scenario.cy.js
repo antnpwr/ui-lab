@@ -36,6 +36,21 @@ describe('QP-01 A custom pizza reaches the admin list', () => {
     cy.get('#default-checkbox').check().should('be.checked')
     cy.get('input#pizza-name').type(pizzaName)
     cy.get('input#pizza-name').should('have.value', pizzaName)
-    
+
+        // Step 4: ask for a pizza
+    cy.get('button[name="pizza-please"]').click()
+    cy.get('#recommendations').should('contain', 'Name: ' + pizzaName)
+    cy.contains('#recommendations p', 'Tool:')
+      .should('not.contain', 'Knife')
+    cy.contains('#recommendations p', 'Calories per slice:')
+      .invoke('text')
+      .then((text) => {
+        const calories = Number(text.replace('Calories per slice:', ''))
+        expect(calories).to.be.at.most(600)
+      })
+
+          // Step 5: rate the pizza without logging in
+    cy.get('button[name="rate-5"]').click()
+    cy.get('#rate-result').should('have.text', 'Please log in first.')
   })
 })
