@@ -39,7 +39,8 @@ Title should have been 'Web Form' but was 'Web form'.
     - npm: 11.19.0
     - cypress: cypress@16.2.1
 - Step 4.3, failure message for the wrong title: AssertionError: Timed out retrying after 10000ms: expected 'Web form' to equal 'Web Form'
-- Step 4.6, tool and calories in the answer of POST /api/pizza: - Step 4.7, the line of the admin list that shows your pizza:
+- Step 4.6, tool and calories in the answer of POST /api/pizza: Pizza cutter, 325
+- Step 4.7, the line of the admin list that shows your pizza:
 - Step 4.8, run 1, result, duration and pizza name:
 - Step 4.8, run 2, result, duration and pizza name:
 - Step 4.9 (optional), browser and result:
