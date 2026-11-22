@@ -41,9 +41,22 @@ Title should have been 'Web Form' but was 'Web form'.
 - Step 4.3, failure message for the wrong title: AssertionError: Timed out retrying after 10000ms: expected 'Web form' to equal 'Web Form'
 - Step 4.6, tool and calories in the answer of POST /api/pizza: Pizza cutter, 325
 - Step 4.7, the line of the admin list that shows your pizza: Lab Pizza 20261123-021011 (tool=Pizza cutter, ingredients_number=5) (newest)
-- Step 4.8, run 1, result, duration and pizza name:
-- Step 4.8, run 2, result, duration and pizza name:
+- Step 4.8, run 1, result, duration and pizza name: All specs passed!, 00:14, Lab Pizza 20261123-023005
+- Step 4.8, run 2, result, duration and pizza name: All specs passed!, 00:13, Lab Pizza 20261123-023930
 - Step 4.9 (optional), browser and result:
 
-## Part B 
-1.
+## Part B
+
+1. The three number boxes of QuickPizza all share the id `floating_filled`. I think the page give each box its own id, so a tester can write a easier locator such as `id:max-calories`s.
+
+2. It check the consistency or if the data saved correctly from both side. There could be a fault where the data shows on the recommend page and the one in the admin is different. For example, showing a different tool. 
+
+3. A check can maybe add `expect(response.body.vegetarian).to.be.true`. Another source can be to have a fixed list of meat ingredients and check that none appears.
+
+4. In Robot Framework I had to write the waits myself, Cypress waited by itself so Cypress was quicker to write. QP-01 is all in one  file and not need ChromeDriver, while Robot Framework needed it and a resource file and  environment variable. Cypress gave a video of the run too.
+
+5. I would choose Cypress because I did not have to write a wait. The video and Command Log also make it easy to understand and find the cause of a fail.
+
+6. In Robot Framework, if QuickPizza changed the calories box, I then can change only that one variable line in the resource file. The keywords Turn On Advanced and Fill In The Pizza Request use the variable, so they would pick up the new locator, and the test file would not change at all.
+
+7. Cypress clears cookies before each test, so if there is a second test, the browser can land on a different server whose admin list does not contain the new pizza. Having one test keeps the same cookie and same server, so can see the correct pizza.
