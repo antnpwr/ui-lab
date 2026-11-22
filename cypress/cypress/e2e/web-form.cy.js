@@ -3,7 +3,7 @@
 describe('Web form', () => {
   it('fills in the fields and sends the form', () => {
     cy.visit('https://www.selenium.dev/selenium/web/web-form.html')
-    cy.title().should('eq', 'Web Form')
+    cy.title().should('eq', 'Web form')
 
     cy.get('#my-text-id').type('Cypress')
     cy.get('#my-text-id').should('have.value', 'Cypress')
