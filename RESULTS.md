@@ -8,8 +8,17 @@ Tool parts that I chose: Robot and Cypress
 - Step 0.4, locator of Excluded tools: $x("//select[option[normalize-space()='Knife']]")
 - Step 0.4, locator of Must be vegetarian: $x("//label[normalize-space()='Must be vegetarian']/preceding-sibling::input")
 - Step 0.4, locator of Custom Pizza Name: $$("input#pizza-name")
-- Step 0.5, pizza name, tool and calories of the run by hand:
-| Step | Actual result | Pass or fail | |------|---------------|--------------| |1||| |2||| |3||| |4||| |5||| |6||| |7|||
+- Step 0.5, pizza name, tool and calories of the run by hand:  
+
+| Step | Actual result | Pass or fail | 
+|------|---------------|--------------| 
+| 1 | The heading reads Looking to break out of your pizza routine? |pass | 
+| 2 | Max Calories per Slice, Excluded tools, Must be vegetarian and Custom Pizza Name appear | pass | 
+| 3 | The fields show the values| pass | 
+| 4 | The answer shows the pizza name (random name), a tool other than Knife (Pizza cutter), and 600 or fewer calories per slic (375) | pass | 
+|5 | The page says Please log in first. | pass | 
+|6 | The page shows Latest pizza recommendations | pass | 
+|7| The line shows the pizza "random name (tool=Pizza cutter, ingredients_number=5)" | pass |
 
 ## Part 3: Robot Framework
 - robot --version:
