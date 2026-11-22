@@ -21,8 +21,9 @@ Tool parts that I chose: Robot and Cypress
 |7| The line shows the pizza "random name (tool=Pizza cutter, ingredients_number=5)" | pass |
 
 ## Part 3: Robot Framework
-- robot --version:
-- Step 3.2, failure message for the wrong title:
+- robot --version: Robot Framework 7.5.1 (Python 3.14.7 on darwin)
+- Step 3.2, failure message for the wrong title: The Web Form Opens :: Open the web form and check its title.   | FAIL |
+Title should have been 'Web Form' but was 'Web form'.
 - Step 3.8, run 1, result, elapsed time and pizza name: - Step 3.8, run 2, result, elapsed time and pizza name:
 
 ## Part 4: Cypress
